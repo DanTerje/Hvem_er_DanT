@@ -1,1 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Litt off-white som LoveFrom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Georgia', serif; /* Erstatter LoveFrom Serif */
+}
 
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    margin: 0;
+    font-weight: normal;
+    animation: typing 2s steps(15, end);
+}
+
+.title::after {
+    content: ",";
+    animation: comma 0.5s ease-in-out 2s forwards;
+}
+
+.description {
+    font-size: 1.2em;
+    max-width: 600px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2.5s forwards;
+}
+
+/* Animasjoner */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes comma {
+    0% { transform: rotate(0deg); opacity: 0; }
+    50% { transform: rotate(180deg); opacity: 1; }
+    100% { transform: rotate(0deg); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
